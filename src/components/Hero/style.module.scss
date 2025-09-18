@@ -1,0 +1,30 @@
+.wrapper {
+  color: #ff8303;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 35px;
+  text-align: center;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 50px;
+  }
+
+  .btn {
+    width: max-content;
+    margin: 0 auto;
+    color: #ff8303;
+    border-radius: 12px;
+    border: 2px solid #ff8303;
+    padding: 10px 31px;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
