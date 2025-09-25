@@ -6,9 +6,10 @@ export default function ToDoForm({
   setTodoTitle,
   todoAbout,
   setTodoAbout,
+  addTodo,
 }) {
   return (
-    <form className={s.wrapper}>
+    <form onSubmit={addTodo} className={s.wrapper}>
       <div className={s.inputs}>
         <input
           type="text"
@@ -19,8 +20,8 @@ export default function ToDoForm({
         <input
           type="text"
           placeholder="About..."
-          value={todoTitle}
-          onChange={(e) => setTodoTitle(e.target.value)}
+          value={todoAbout}
+          onChange={(e) => setTodoAbout(e.target.value)}
         />
       </div>
       <button className={s.btn}>

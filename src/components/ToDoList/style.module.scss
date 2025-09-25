@@ -46,9 +46,35 @@
   }
 
   .noTasks {
+    position: relative;
     font-size: 24px;
     font-weight: 400;
     color: #ffffff;
     margin-top: 40px;
+    padding: 10px 0;
+
+    &::before {
+      content: "";
+      width: 64px;
+      height: 3px;
+      background-color: #ff8303;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 8px;
+    }
+
+    &::after {
+      content: "";
+      width: 64px;
+      height: 3px;
+      background-color: #ff8303;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      border-radius: 8px;
+    }
   }
 }

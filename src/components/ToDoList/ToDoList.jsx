@@ -1,7 +1,7 @@
 import s from "./style.module.scss";
 import { GrClose } from "react-icons/gr";
 
-export default function ToDoList({ todos }) {
+export default function ToDoList({ todos, deleteTodo }) {
   return (
     <div className={s.wrapper}>
       {todos.length > 0 ? (
@@ -11,7 +11,7 @@ export default function ToDoList({ todos }) {
               <h1>{todo.title}</h1>
               <p>{todo.about}</p>
             </div>
-            <button className={s.btn}>
+            <button onClick={() => deleteTodo(todo.id)} className={s.btn}>
               <GrClose size={15} color="#FF8303" />
             </button>
           </div>
