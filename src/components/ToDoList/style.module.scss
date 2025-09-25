@@ -1,5 +1,54 @@
 .wrapper {
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
   padding: 23px;
-  color: #f0e3ca;
+
+  .card {
+    border: 2px solid #a35709;
+    width: 100%;
+    background-color: #242320;
+    border-radius: 8px;
+    padding: 12px;
+    color: #f0e3ca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      h1 {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .btn {
+      border: 2px solid #a35709;
+      background-color: #1b1a17;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .noTasks {
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 40px;
+  }
 }
