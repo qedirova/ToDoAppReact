@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ToDoForm from "../../components/ToDoForm/ToDoForm";
 import ToDoList from "../../components/ToDoList/ToDoList";
 import { notifyError, notifySuccess } from "../../utils/notifications";
+import Container from "../../components/Container/Container";
 
 export default function List() {
   const [todos, setTodos] = useState(() => {
@@ -41,7 +42,7 @@ export default function List() {
   }, [todos]);
 
   return (
-    <div className="container">
+    <Container>
       <ToDoForm
         addTodo={addTodo}
         todoTitle={todoTitle}
@@ -50,6 +51,6 @@ export default function List() {
         setTodoAbout={setTodoAbout}
       />
       <ToDoList todos={todos} deleteTodo={deleteTodo} />
-    </div>
+    </Container>
   );
 }
